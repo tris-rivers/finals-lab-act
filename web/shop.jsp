@@ -246,7 +246,7 @@
             
             .social-icon{
                 height: 30px;
-                weigh: 30px;
+                width: 30px;
                 padding-right: 10px;
             }
             
@@ -717,9 +717,9 @@
                     </div>
                 </div>
                 
-                <c:set var="list_plants" value='${requestScope["plants"]}' />
-                <c:set var="list_cacti" value='${requestScope["cacti"]}' />
-                <c:set var="list_succulents" value='${requestScope["succulents"]}' />
+                <c:set var="list_plants" value='${requestScope["paint"]}' />
+                <c:set var="list_cacti" value='${requestScope["brushes"]}' />
+                <c:set var="list_succulents" value='${requestScope["canvas"]}' />
                 
                 <c:set var="filename" value = "1"/>
                 <c:set var="description" value = "2"/>
@@ -729,7 +729,7 @@
                 <div id="shop" style="margin-top: 50px; margin-bottom: 50px" class="row">
                     <center>
                         <hr class="hr hr1">
-                        <h1>PLANTS AND LEAVES</h1>
+                        <h1>PAINT</h1>
                         <hr style="width: 15px; margin-bottom: 0px; height: 5px">
                         <br><br>
                     </center>
@@ -783,7 +783,7 @@
                 <div id="shop" style="margin-top: 50px; margin-bottom: 50px" class="row">
                     <center>
                         <hr class="hr hr1">
-                        <h1>CACTI</h1>
+                        <h1>BRUSHES</h1>
                         <hr style="width: 15px; margin-bottom: 0px; height: 5px">
                         <br><br>
                     </center>
@@ -837,7 +837,7 @@
                 <div id="shop" style="margin-top: 50px; margin-bottom: 50px" class="row">
                     <center>
                         <hr class="hr hr1">
-                        <h1>SUCCULENTS</h1>
+                        <h1>CANVAS</h1>
                         <hr style="width: 15px; margin-bottom: 0px; height: 5px">
                         <br><br>
                     </center>
@@ -891,7 +891,7 @@
                                 <p>
                                     Address: 10 N. Domingo Street Barangay Valencia Quezon City<br>
                                     Phone: 9450150<br>
-                                    Email: greenery@domain.com
+                                    Email: artbar@domain.com
                                     <br><br><br><br><br><br><br>
                                 </p>
                             </div>
@@ -937,7 +937,7 @@
                 </footer>
                
                 <div style="color: #B97F6D; padding-top: 500px;">
-                    <center>The Greenery &#169; 2017 </center>
+                    <center>Art Bar &#169; 2017 </center>
                 </div>
             </div>
         </body>

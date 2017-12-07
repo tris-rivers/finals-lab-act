@@ -46,7 +46,7 @@
             }
             
             aside {
-                background: #093C33;
+                background: #34344A;
                 height: 100%;
                 left: 0;
                 position: fixed;
@@ -69,7 +69,7 @@
             
             header {
                 font-family: Champagne;
-                background: #093C33;
+                background: #34344A;
                 height: 30px;
                 left: 0;
                 position: fixed;
@@ -199,7 +199,7 @@
         <aside>
             <nav>
               <ul>
-                  <li style="background-color: #228B22; color: #ffffff; text-decoration: none;"><a href="admin.jsp"><img src="Images/icons_admin/dashboard.png" class="icons-nav">Dashboard</a></li>
+                  <li style="background-color: #B97F6D; color: #ffffff; text-decoration: none;"><a href="admin.jsp"><img src="Images/icons_admin/dashboard.png" class="icons-nav">Dashboard</a></li>
                   <li>
                     <form action="ViewUsers">
                         <a>
@@ -229,7 +229,7 @@
             </nav>
         </aside>
         <header>
-            <a href="index.jsp"><img src="Images/icons_admin/logo.png" class="icons-header">Greenery</a>
+            <a href="index.jsp"><img src="img/header-icon1.png" class="icons-header">Art Bar</a>
             <form action="SignoutServlet" method="post">
                 <div class="logout">
                     <button type="submit" name="users" value="users">Logout</button>
@@ -245,7 +245,7 @@
                     Insert new items in your inventory
                     <br><br>
                     <%--<c:set var="name" value='${requestScope["message"]}' />--%>
-                    <div style="color: red"><s:property value="message"/></div>
+                    <div style="color: green"><s:property value="message"/></div>
                     <br>
                 </div>
                     

@@ -97,7 +97,7 @@
             }
             
             aside {
-                background: #093C33;
+                background: #34344A;
                 height: 100%;
                 left: 0;
                 position: fixed;
@@ -113,7 +113,7 @@
             
             header {
                 font-family: Champagne;
-                background: #093C33;
+                background: #34344A;
                 height: 30px;
                 left: 0;
                 position: fixed;
@@ -225,7 +225,7 @@
             <nav>
               <ul>
                   <li><a href="admin.jsp"><img src="Images/icons_admin/dashboard.png" class="icons-nav">Dashboard</a></li>
-                  <li style="background-color: #228B22; color: #ffffff; text-decoration: none;">
+                  <li style="background-color: #B97F6D; color: #ffffff; text-decoration: none;">
                       <form action="UserManagement" method="post">
                           <a>
                             <button type="submit" name="button" value="users"><img src="Images/icons_admin/user.png" class="icons-nav">
@@ -254,7 +254,7 @@
             </nav>
         </aside>
         <header>
-            <a href="index.jsp"><img src="Images/icons_admin/logo.png" class="icons-header">Greenery</a>
+            <a href="index.jsp"><img src="img/header-icon1.png" class="icons-header">Art Bar</a>
             <form action="Signout">
                 <div class="logout">
                     <button type="submit" name="button" value="logout">Logout</button>
@@ -395,7 +395,7 @@
                                                           
                                         <div class="col-sm-1">
                                                 <center>
-                                                    <button type="submit" name="update" value= "${item.getId()}" class="btn btn-default btn-sm button">
+                                                    <button type="submit" name="update" value= "${item.getId()}" class="btn btn-default btn-sm">
                                                         Update
                                                     </button>
                                                 </center>
@@ -403,7 +403,7 @@
                                         <div class="col-sm-1">
                                                 <center>
                                                     <c:if test="${type != 'Main'}">
-                                                    <button type="submit" name="delete" value= "${item.getId()}" class="btn btn-default btn-sm button" onclick = "return confirmDelete()">
+                                                    <button type="submit" name="delete" value= "${item.getId()}" class="btn btn-default btn-sm btn-danger" onclick = "return confirmDelete()">
                                                         Delete
                                                     </button>
                                                     </c:if>

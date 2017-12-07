@@ -27,7 +27,7 @@
 
     <c:if test="${sessionScope.clock == null}">
         <body>
-            <nav class="navbar animated slideInDown">
+            <nav class="navbar">
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
                 <a href="faq.jsp">FAQ</a>
@@ -71,19 +71,19 @@
             </div>
 
             <div id="shop" style="margin-top: 50px;" class="row">
-                <div class="title-category col-sm-4">
-                    <img class=" wow fadeInUp" src="img/coll/paintframe.jpg" style="width: 400px; height: auto;">
+                <div class="title-category col-sm-4 wow fadeInUp">
+                    <img src="img/coll/paintframe.jpg" style="width: 400px; height: auto;">
                     <div style="top: 45px; left:180px; position: absolute; letter-spacing: 3px;">Paint</div><br>
                     <div style="top: 65px; left:196px; position: absolute;">__</div>
                     <div style="top: 105px; left:120px; position: absolute; letter-spacing: 3px;">Shop Collection</div>
                 </div>
-                <div class="title-category col-sm-4">
+                <div class="title-category col-sm-4 wow fadeInUp">
                     <img src="img/coll/brushframe.jpg" style="width: 400px; height: auto;">
                     <div style="top: 45px; left:180px; position: absolute; letter-spacing: 3px;">Brushes</div><br>
                     <div style="top: 65px; left:210px; position: absolute;">__</div>
                     <div style="top: 105px; left:130px; position: absolute; letter-spacing: 3px;">Shop Collection</div>
                 </div>
-                <div class="title-category col-sm-4">
+                <div class="title-category col-sm-4 wow fadeInUp">
                     <img src="img/coll/canvasframe.jpg" style="width: 400px; height: auto;">
                     <div style="top: 45px; left:180px; position: absolute; letter-spacing: 3px;">Canvas</div><br>
                     <div style="top: 65px; left:210px; position: absolute;">__</div>
@@ -107,20 +107,20 @@
                 </center>
                 </td>
                 <td>
-                    <img src="img/form-img.jpg" style="width: 533px; height: 370px;">
+                    <img class="wow slideInRight" src="img/form-img.jpg" style="width: 533px; height: 370px;">
                 </td>
                 </tr>
                 <tr>
                     <td>
-                        <img src="Images/index/index_bot3.jpg" style="width: 720px; height: 500px">
+                        <img class="wow slideInLeft" src="img/art_studio_1.jpg" style="width: 720px; height: 500px">
                     </td>
-                    <td colspan="2" class="buy-now" style="background-color: #EAD2AC">
+                    <td colspan="2" class="buy-now" style="background-color: #34344A">
                 <center>BUY ONLINE NOW & GET 20% OFF!</center>
                 </td>
                 </tr>
             </table>
 
-            <div id = "contact" class="parallax" data-parallax="scroll" data-z-index="1" data-image-src="img/samuel.jpg">
+            <div id = "contact" class="parallax" data-parallax="scroll" data-z-index="1" data-image-src="img/joanna.jpg">
                 <div class="contact">
                     <center>
                         For Special Requests and Orders
@@ -188,7 +188,7 @@
                     </div>
                     </body>
                 </c:if>
-<!-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+                <!-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
                 <!-HEADER FOR ADMIN-->               
                 <c:if test="${sessionScope.clock != null}">
                     <body>
@@ -257,7 +257,7 @@
                             <div id = "home" class="parallax" data-parallax="scroll" data-z-index="1" data-image-src="img/header.jpg">
                                 <div class="title">
                                     <center>
-                                        EST <img src="Images/index/header-icon.png" style="height: 100px; width: 80px"> 2017
+                                        EST <img src="img/header-icon1.jpg" style="height: 100px; width: 80px"> 2017
                                         <br>
                                         <div class="company">ART BAR</div>
                                         SATISFY YOUR CREATIVE SIDE
@@ -266,27 +266,27 @@
                             </div>
 
                             <div id="shop" style="margin-top: 50px;" class="row">
-                                <div class="title-category col-lg-4">
-                                    <img src="Images/index/plant.png" style="width: 450px;">
-                                    <div style="top: 50px; left:210px; position: absolute; letter-spacing: 3px;">Plants</div><br>
-                                    <div style="top: 70px; left:230px; position: absolute;">__</div>
-                                    <div style="top: 110px; left:157px; position: absolute; letter-spacing: 3px;">Shop Collection</div>
+                                <div class="title-category col-sm-4">
+                                    <img class=" wow fadeInUp" src="img/coll/paintframe.jpg" style="width: 400px; height: auto;">
+                                    <div style="top: 45px; left:180px; position: absolute; letter-spacing: 3px;">Paint</div><br>
+                                    <div style="top: 65px; left:196px; position: absolute;">__</div>
+                                    <div style="top: 105px; left:120px; position: absolute; letter-spacing: 3px;">Shop Collection</div>
                                 </div>
-                                <div class="title-category col-lg-4">
-                                    <img src="Images/index/cacti.png" style="width: 450px;">
-                                    <div style="top: 50px; left:210px; position: absolute; letter-spacing: 3px;">Cacti</div><br>
-                                    <div style="top: 70px; left:230px; position: absolute;">__</div>
-                                    <div style="top: 110px; left:157px; position: absolute; letter-spacing: 3px;">Shop Collection</div>
+                                <div class="title-category col-sm-4">
+                                    <img src="img/coll/brushframe.jpg" style="width: 400px; height: auto;">
+                                    <div style="top: 45px; left:180px; position: absolute; letter-spacing: 3px;">Brushes</div><br>
+                                    <div style="top: 65px; left:210px; position: absolute;">__</div>
+                                    <div style="top: 105px; left:130px; position: absolute; letter-spacing: 3px;">Shop Collection</div>
                                 </div>
-                                <div class="title-category col-lg-4">
-                                    <img src="Images/index/succulent.png" style="width: 450px;">
-                                    <div style="top: 50px; left:190px; position: absolute; letter-spacing: 3px;">Succulents</div><br>
-                                    <div style="top: 70px; left:230px; position: absolute;">__</div>
-                                    <div style="top: 110px; left:157px; position: absolute; letter-spacing: 3px;">Shop Collection</div>
+                                <div class="title-category col-sm-4">
+                                    <img src="img/coll/canvasframe.jpg" style="width: 400px; height: auto;">
+                                    <div style="top: 45px; left:180px; position: absolute; letter-spacing: 3px;">Canvas</div><br>
+                                    <div style="top: 65px; left:210px; position: absolute;">__</div>
+                                    <div style="top: 105px; left:135px; position: absolute; letter-spacing: 3px;">Shop Collection</div>
                                 </div>
                             </div>
 
-                            <table id="about" class="row" style="margin: 50px 0px 0px 0px;">
+                            <table id="about" class="row" style="margin: 50px 0px 0px 0px;" width="1250">
                                 <tr>
                                     <td class="about">
                                 <center>
@@ -297,26 +297,21 @@
                                         Duo suas novum ornatus an. At mea nobis congue debitis, affert complectitur at eos, et pro mollis vivendo omittam.
                                         Virtute lobortis liberavisse vix an. In sale legere periculis per, quaeque constituto disputationi usu ei. At mel tale intellegam. 
                                         Ei deleniti lucilius his. Adhuc rationibus dissentias id sea, cu qui persius docendi, et ius nibh mucius tamquam.
-                                        Ad stet civibus mei. Qui vide tamquam explicari in. Lorem libris accusamus eum ea, appareat lobortis atomorum quo te. Vero elit invidunt per et, mea an ludus viderer, at quas delectus eos.
-                                        Sit cu sanctus repudiandae, sed corpora accusata necessitatibus ea. Sed ea wisi saperet verterem. Ne pri tale impetus reformidans. 
 
                                     </p>
                                 </center>
                                 </td>
                                 <td>
-                                    <img src="Images/index/index_bot4.jpg" style="width: 350px; height: 500px;">
-                                </td>
-                                <td>
-                                    <img src="Images/index/index_bot2.jpg" style="width: 350px; height: 500px;">
+                                    <img src="img/form-img.jpg" style="width: 533px; height: 370px;">
                                 </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <img src="Images/index/index_bot3.jpg" style="width: 720px; height: 500px">
+                                        <img src="img/art_studio_1.jpg" style="width: 720px; height: 500px">
                                     </td>
-                                    <td colspan="2" class="buy-now">
-                                        <center>BUY ONLINE NOW & GET 20% OFF!</center>
-                                    </td>
+                                    <td colspan="2" class="buy-now" style="background-color: #34344A">
+                                <center>BUY ONLINE NOW & GET 20% OFF!</center>
+                                </td>
                                 </tr>
                             </table>
 
@@ -395,12 +390,12 @@
 
 
 
-
-                        <script src="js/script.js"></script>
-                        <script src="js/wow.min.js"></script>
-                        <script>
+                    </c:if>
+                    <script src="js/script.js"></script>
+                    <script src="js/wow.min.js"></script>
+                    <script>
                                 new WOW().init();
-                        </script>                
-                    </body>
-                </c:if>
+                    </script>                
+                </body>
+
                 </html>
