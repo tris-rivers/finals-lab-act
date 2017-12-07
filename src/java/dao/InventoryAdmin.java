@@ -327,26 +327,26 @@ public class InventoryAdmin extends ActionSupport implements SessionAware {
         }*/
     }
     
-    /*private Connection connect(){
+    private Connection connect(){
         Connection conn = null;
         
         try{
             String dbDriver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
             Class.forName(dbDriver);
             
-            String dbUrl = "jdbc:sqlserver://localhost:1433;databaseName=ICS114";
-            conn = DriverManager.getConnection(dbUrl,"sa","Arianne328");
+            String dbUrl = "jdbc:sqlserver://localhost:1433;databaseName=ICS114Reference";
+            conn = DriverManager.getConnection(dbUrl,"sa","123sql");
             
         }catch(Exception ex){
             System.out.print("Unable to connect to database");
         }
         
         return conn;
-    }*/
+    }
     
     //insert new item
     public String create(){
-        Session session =  sessionFactory.openSession();
+        /*Session session =  sessionFactory.openSession();
         Transaction tx = null;
         
         try {
@@ -364,7 +364,8 @@ public class InventoryAdmin extends ActionSupport implements SessionAware {
             tx.commit();
             
         }catch (HibernateException e) {
-            if (tx!=null) tx.rollback();
+            e.toString();
+            //if (tx!=null) tx.rollback();
 
         }finally {
             //session.flush();
@@ -373,10 +374,11 @@ public class InventoryAdmin extends ActionSupport implements SessionAware {
         
         message = "Item successfully added!";
         return "Success";
-        
-        /*int i = 0;
+        */
+        int i = 0;
         String sql = "INSERT INTO Inventory (description,category,quantity,price,filename,path) VALUES (?,?,?,?,?,?)";
         Connection con = connect();
+        System.out.println("description: " + description + category + quantity + price + filename + path);
         
         try{
             PreparedStatement ps = con.prepareStatement(sql);
@@ -400,7 +402,7 @@ public class InventoryAdmin extends ActionSupport implements SessionAware {
         else{
             message = "Cannot add a new item";
             return "Failed";
-        }*/
+        }
     }
     
     //getting the path of the image

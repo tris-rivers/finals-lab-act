@@ -15,7 +15,7 @@ import java.io.Serializable;
 @Entity
 @Table(name = "Inventory")
 public class InventoryModel implements Serializable{
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id @GeneratedValue
     @Column(name = "id")
     private String id;
     

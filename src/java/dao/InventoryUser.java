@@ -26,9 +26,9 @@ public class InventoryUser extends ActionSupport implements SessionAware {
     private Map<String, Object> sessionMap;
     private static SessionFactory sessionFactory;
     
-    private List plants;
-    private List cacti;
-    private List succulents;
+    private List paint;
+    private List brushes;
+    private List canvas;
     
     public String execute() throws Exception {
         
@@ -38,9 +38,9 @@ public class InventoryUser extends ActionSupport implements SessionAware {
         
         switch(button){
            case "shop":
-               view("Plants");
-               view("Cacti");
-               view("Succulents");
+               view("Paint");
+               view("Brushes");
+               view("Canvas");
                result = "Success";
                break;
         }
@@ -48,26 +48,26 @@ public class InventoryUser extends ActionSupport implements SessionAware {
          return result;
     }
     
-    /*private Connection connect(){
+    private Connection connect(){
         Connection conn = null;
         
         try{
             String dbDriver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
             Class.forName(dbDriver);
             
-            String dbUrl = "jdbc:sqlserver://localhost:1433;databaseName=ICS114";
-            conn = DriverManager.getConnection(dbUrl,"sa","Arianne328");
+            String dbUrl = "jdbc:sqlserver://localhost:1433;databaseName=ICS114Reference";
+            conn = DriverManager.getConnection(dbUrl,"sa","123sql");
             
         }catch(Exception ex){
             System.out.print("Unable to connect to database");
         }
         
         return conn;
-    }*/
+    }
     
     //view all items per category
     public String view(String category){
-        Session session =  sessionFactory.openSession();
+        /*Session session =  sessionFactory.openSession();
         Transaction tx = null;
         List list = new ArrayList();
         
@@ -85,12 +85,12 @@ public class InventoryUser extends ActionSupport implements SessionAware {
             
             tx.commit();
             
-            if(category.equals("Plants")){
-                setPlants(list);
-            }else if(category.equals("Cacti")){
-                setCacti(list);
+            if(category.equals("Paint")){
+                setPaint(list);
+            }else if(category.equals("Brushes")){
+                setBrushes(list);
             }else{
-                setSucculents(list);
+                setCanvas(list);
             }
             
         }catch (HibernateException e) {
@@ -101,9 +101,9 @@ public class InventoryUser extends ActionSupport implements SessionAware {
         }
         
         return "Success";
+        */
         
-        
-        /*String sql = "SELECT filename,description,price,id FROM Inventory WHERE category = '" + category + "'";
+        String sql = "SELECT filename,description,price,id FROM Inventory WHERE category = '" + category + "'";
         Connection con = connect();
         List list = new ArrayList();
         
@@ -120,12 +120,12 @@ public class InventoryUser extends ActionSupport implements SessionAware {
                 //list.add(rs.getString(6));
             }
             
-            if(category.equals("Plants")){
-                setPlants(list);
-            }else if(category.equals("Cacti")){
-                setCacti(list);
+            if(category.equals("Paint")){
+                setPaint(list);
+            }else if(category.equals("Brushes")){
+                setBrushes(list);
             }else{
-                setSucculents(list);
+                setCanvas(list);
             }
             
             rs.close();
@@ -135,7 +135,7 @@ public class InventoryUser extends ActionSupport implements SessionAware {
             System.out.println("\nEmpty Database");
         }
         
-        return "Success";*/
+        return "Success";
     }
     
     
@@ -153,30 +153,27 @@ public class InventoryUser extends ActionSupport implements SessionAware {
         this.button = button;
     }
 
-    public List getPlants() {
-        return plants;
+    public List getPaint() {
+        return paint;
     }
 
-    public void setPlants(List plants) {
-        this.plants = plants;
+    public void setPaint(List paint) {
+        this.paint = paint;
     }
 
-    public List getCacti() {
-        return cacti;
+    public List getBrushes() {
+        return brushes;
     }
 
-    public void setCacti(List cacti) {
-        this.cacti = cacti;
+    public void setBrushes(List brushes) {
+        this.brushes = brushes;
     }
 
-    public List getSucculents() {
-        return succulents;
+    public List getCanvas() {
+        return canvas;
     }
 
-    public void setSucculents(List succulents) {
-        this.succulents = succulents;
+    public void setCanvas(List canvas) {
+        this.canvas = canvas;
     }
-    
-    
-    
 }

@@ -8,9 +8,9 @@
     
     <!-- Database Connection Settings -->
     <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
-    <property name="hibernate.connection.url">jdbc:sqlserver://localhost:1433;databaseName=ICS114</property>
+    <property name="hibernate.connection.url">jdbc:sqlserver://localhost:1433;databaseName=ICS114Reference</property>
     <property name="hibernate.connection.username">sa</property>
-    <property name="hibernate.connection.password">Arianne328</property>
+    <property name="hibernate.connection.password">123sql</property>
     
     
     <property name="hibernate.show_sql">true</property>
