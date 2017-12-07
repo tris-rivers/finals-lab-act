@@ -1,0 +1,245 @@
+@font-face {
+    font-family: Champagne;
+    src: url(../Fonts/Champagne.ttf);
+}
+
+@font-face {
+    font-family: CodeBold;
+    src: url(../Fonts/Code-Bold.otf);
+}
+
+@font-face {
+    font-family: ChampagneRegular;
+    src: url(../Fonts/Champagne-Regular.ttf);
+}
+
+html,body{
+    font-family: Champagne;
+    transition: background-color .5s;
+    background: #F2F2F2;
+}
+.container-fluid{
+    max-width: 100%;
+    margin: 0 auto;
+    background: #F2F2F2;
+    padding: 50px;
+
+}
+
+.parallax{
+    min-height: 900px;
+    background: transparent;
+
+}
+
+.title{
+    z-index: 2;
+    position: relative;
+    padding: 100px;
+    color: #FFF;
+    font-size: 20px;
+    letter-spacing: 5px;
+    font-family: ChampagneRegular;
+
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #F2F2F2;
+    position: fixed;
+    width:100%;
+    top: 0;
+    z-index:5;
+    padding-left: 50px;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #B97F6D;
+    text-align: center;
+    padding: 14px 25px;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 3px;
+}
+
+.navbar a:hover {  
+    color: #093C33;
+}
+
+.company{
+    font-family: CodeBold;
+    font-size: 150px;
+}
+
+
+.title-category{
+    font-size: 20px;
+    color: #B97F6D;
+}
+
+.about{
+    background-color: white;
+    margin-left: 15px;
+    padding: 70px 100px;
+    font-size: 20px;
+    color: #B97F6D;
+    letter-spacing: 3px;
+}
+
+p{
+    font-size: 14px;
+    font-family: ChampagneRegular;
+}
+
+.buy-now{
+    background-color: #093C33;
+    font-size: 80px;
+    font-family: CodeBold;
+    padding: 10px 100px;
+    letter-spacing: 3px;
+    color: #B97F6D;
+    line-height: 90px;
+}
+
+.contact{
+    z-index: 2;
+    position: relative;
+    padding: 130px;
+    color: #B97F6D;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+input{
+    border-color: transparent;
+    outline: none;
+    font-size: 14px;
+    font-family: ChampagneRegular;
+    padding: 2px;
+    width: 500px;
+    color: #B97F6D;
+    margin: 10px;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #B97F6D;
+}
+
+textarea{
+    border-color: transparent;
+    outline: none;
+    font-size: 14px;
+    font-family: ChampagneRegular;
+    padding: 2px;
+    color: #B97F6D;
+    margin: 10px;
+    width: 500px;
+    height: 200px;
+}
+
+.submit-contact{
+    width: 500px;
+    color: white;
+    background-color: #B97F6D;
+    font-size: 14px;
+    font-family: ChampagneRegular;
+    padding: 5px;
+    border-color: transparent;
+    outline: none;
+}
+
+.footer{
+    color: #B97F6D;
+    background-color: #093C33;
+    padding: 100px;
+    padding-bottom: 80px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #093C33;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 15px;
+    z-index: 5;
+    font-family: ChampagneRegular;
+    font-size: 15px;
+    color: #B97F6D;
+}
+
+.sidenav a {
+    padding: 0px 5px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    transition: 0.3s;
+    color: #B97F6D;
+
+}
+
+.products{
+    padding: 8px 5px 8px 32px;
+}
+
+.sidenav a:hover {
+    color: #F2F2F2;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    margin-right: 10px;
+    padding-right: 10px;
+    float: right;
+    margin-top: -52px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.right-icon{
+    height: 23px;
+    weigh: 23px;
+    padding-right: 10px;
+}
+
+p a, p a:hover{
+    color: #B97F6D;
+}
+
+.social-icon{
+    height: 30px;
+    weigh: 30px;
+    padding-right: 10px;
+}
+
+button{
+    border: transparent;
+    background-color: transparent;
+    outline: none;
+}
+
+.coll:hover {
+
+    opacity: 0.8; /* 1 = 100%, 0 = 0% */
+
+    /* or the drop-shadow effect */
+
+    box-shadow: 0 1px 8px black; /* goes x-axis, y-axis, blur, (stretch factor on x-axis, not used here), colour */
+
+}
