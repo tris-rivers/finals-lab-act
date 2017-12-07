@@ -94,11 +94,11 @@ p{
 }
 
 .buy-now{
-    background-color: #093C33;
-    font-size: 80px;
+    background-color: #EAD2AC;
+    font-size: 64px;
     font-family: CodeBold;
     padding: 10px 100px;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     color: #B97F6D;
     line-height: 90px;
 }

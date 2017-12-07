@@ -576,7 +576,7 @@ public class UserManagement extends ActionSupport implements SessionAware {
             ps.setString(2, firstname);
             ps.setString(3, username);
             ps.setString(4, password);
-            //ps.setString(5, m.getUsertype());
+            ps.setString(5, usertype); //m.getUsertype()
             
             i = ps.executeUpdate();
         }
