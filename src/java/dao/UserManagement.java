@@ -373,10 +373,24 @@ public class UserManagement extends ActionSupport implements SessionAware {
         Transaction tx = null;
         ArrayList<ModelMVC> a = new ArrayList<ModelMVC>();
         ModelMVC record;
+        List accounts;
+        String temp_usertype = null;
 
         try {
             tx = session.beginTransaction();
-            List accounts = session.createQuery("FROM UserModel").list();
+            
+            List temp = session.createQuery("FROM UserModel WHERE Username = '" + sessionMap.get("user") + "'").list();
+            
+            for (Iterator iterator = temp.iterator(); iterator.hasNext();){
+                UserModel users = (UserModel) iterator.next();
+                temp_usertype = users.getUsertype();
+            }
+            
+            
+            if(temp_usertype.equals("Main"))
+                accounts = session.createQuery("FROM UserModel").list();
+            else
+                accounts = session.createQuery("FROM UserModel WHERE Usertype = 'Admin' OR Usertype = 'Customer'").list();
             
             for (Iterator iterator = accounts.iterator(); iterator.hasNext();){
                 UserModel users = (UserModel) iterator.next(); 

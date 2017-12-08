@@ -75,19 +75,19 @@
                     <img src="img/coll/paintframe.jpg" style="width: 400px; height: auto;">
                     <div style="top: 45px; left:180px; position: absolute; letter-spacing: 3px;">Paint</div><br>
                     <div style="top: 65px; left:196px; position: absolute;">__</div>
-                    <div style="top: 105px; left:120px; position: absolute; letter-spacing: 3px;">Shop Collection</div>
+                    <div style="top: 105px; left:120px; position: absolute; letter-spacing: 3px;"><a href="#" style="color: #B97F6D">Shop Collection</a></div>
                 </div>
-                <div class="title-category col-sm-4 wow fadeInUp">
+                <div class="title-category col-sm-4 wow fadeInUp" data-wow-delay="0.3s">
                     <img src="img/coll/brushframe.jpg" style="width: 400px; height: auto;">
                     <div style="top: 45px; left:180px; position: absolute; letter-spacing: 3px;">Brushes</div><br>
                     <div style="top: 65px; left:210px; position: absolute;">__</div>
-                    <div style="top: 105px; left:130px; position: absolute; letter-spacing: 3px;">Shop Collection</div>
+                    <div style="top: 105px; left:130px; position: absolute; letter-spacing: 3px;"><a href="#" style="color: #B97F6D">Shop Collection</a></div>
                 </div>
-                <div class="title-category col-sm-4 wow fadeInUp">
+                <div class="title-category col-sm-4 wow fadeInUp" data-wow-delay="0.8s">
                     <img src="img/coll/canvasframe.jpg" style="width: 400px; height: auto;">
                     <div style="top: 45px; left:180px; position: absolute; letter-spacing: 3px;">Canvas</div><br>
                     <div style="top: 65px; left:210px; position: absolute;">__</div>
-                    <div style="top: 105px; left:135px; position: absolute; letter-spacing: 3px;">Shop Collection</div>
+                    <div style="top: 105px; left:135px; position: absolute; letter-spacing: 3px;"><a href="#" style="color: #B97F6D">Shop Collection</a></div>
                 </div>
             </div>
 

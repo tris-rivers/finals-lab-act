@@ -233,13 +233,3 @@ button{
     background-color: transparent;
     outline: none;
 }
-
-.coll:hover {
-
-    opacity: 0.8; /* 1 = 100%, 0 = 0% */
-
-    /* or the drop-shadow effect */
-
-    box-shadow: 0 1px 8px black; /* goes x-axis, y-axis, blur, (stretch factor on x-axis, not used here), colour */
-
-}
