@@ -2,26 +2,19 @@ package dao;
 
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
+import java.sql.*;
+import java.util.*;
 import model.*;
 import org.apache.struts2.interceptor.SessionAware;
 import org.hibernate.*;
-import org.hibernate.cfg.Configuration;
+import org.hibernate.cfg.Configuration; 
+import javax.crypto.*;
 
 /**
  * <code>Set welcome message.</code>
  */
 public class UserManagement extends ActionSupport implements SessionAware {
-
+    static Cipher cipher;
     private String button;
     private String delete;
     private String update;
@@ -80,7 +73,7 @@ public class UserManagement extends ActionSupport implements SessionAware {
     }
     
     //checker if username and password exist
-    public String username(){
+    public String username() throws Exception{
         Session session =  sessionFactory.openSession();
         Transaction tx = null;
         String exists = "Success";
@@ -150,7 +143,7 @@ public class UserManagement extends ActionSupport implements SessionAware {
     }
     
     //checker if username and id exist for update
-    public String checkIdUser(){
+    public String checkIdUser() throws Exception{
         Session session =  sessionFactory.openSession();
         Transaction tx = null;
         String exists = "Success";
@@ -280,9 +273,17 @@ public class UserManagement extends ActionSupport implements SessionAware {
     }
     
     //update data
-    public String update(){
+    public String update() throws Exception{
         Session session =  sessionFactory.openSession();
         Transaction tx = null;
+        
+        KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
+        keyGenerator.init(128); // block size is 128bits
+        SecretKey secretKey = keyGenerator.generateKey();
+        
+        cipher = Cipher.getInstance("AES");
+        
+        String encryptedText = encrypt(password, secretKey);
         
         try {
             tx = session.beginTransaction();
@@ -291,7 +292,7 @@ public class UserManagement extends ActionSupport implements SessionAware {
             users.setLastname(lastname);
             users.setFirstname(firstname);
             users.setUsername(username);
-            users.setPassword(password);
+            users.setPassword(encryptedText);
             users.setUsertype(usertype);
             users.setStatus(status);
 
@@ -531,6 +532,16 @@ public class UserManagement extends ActionSupport implements SessionAware {
         return numberOfAdmins;
     }
     
+    public String encrypt(String plainText, SecretKey secretKey)
+            throws Exception {
+        byte[] plainTextByte = plainText.getBytes();
+        cipher.init(Cipher.ENCRYPT_MODE, secretKey);
+        byte[] encryptedByte = cipher.doFinal(plainTextByte);
+        Base64.Encoder encoder = Base64.getEncoder();
+        String encryptedText = encoder.encodeToString(encryptedByte);
+        return encryptedText;
+    }
+    
     private static Connection connect(){
         Connection conn = null;
         
@@ -539,7 +550,7 @@ public class UserManagement extends ActionSupport implements SessionAware {
             Class.forName(dbDriver);
             
             String dbUrl = "jdbc:sqlserver://localhost:1433;databaseName=ICS114Reference";
-            conn = DriverManager.getConnection(dbUrl,"sa","123sql");
+            conn = DriverManager.getConnection(dbUrl,"sa","admin");
             
         }catch(Exception ex){
             System.out.print("Unable to connect to database");
@@ -549,17 +560,25 @@ public class UserManagement extends ActionSupport implements SessionAware {
     }
     
     //create new user admin
-    public String create_admin(){
+    public String create_admin() throws Exception{
         int i = 0;
         String sql = "INSERT INTO Users_2 (lastname,firstname,username,password,usertype) VALUES (?,?,?,?,?)";
         Connection con = connect();
+        
+        KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
+        keyGenerator.init(128); // block size is 128bits
+        SecretKey secretKey = keyGenerator.generateKey();
+        
+        cipher = Cipher.getInstance("AES");
+        
+        String encryptedText = encrypt(password, secretKey);
         
         try{
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, lastname);
             ps.setString(2, firstname);
             ps.setString(3, username);
-            ps.setString(4, password);
+            ps.setString(4, encryptedText);
             ps.setString(5, usertype);
             
             i = ps.executeUpdate();
@@ -579,18 +598,26 @@ public class UserManagement extends ActionSupport implements SessionAware {
     }
     
     //create new user customer from user side
-    public String create(){
+    public String create() throws Exception{
         int i = 0;
         String sql = "INSERT INTO Users_2 (lastname,firstname,username,password) VALUES (?,?,?,?)";
         Connection con = connect();
+        
+        KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
+        keyGenerator.init(128); // block size is 128bits
+        SecretKey secretKey = keyGenerator.generateKey();
+        
+        cipher = Cipher.getInstance("AES");
+        
+        String encryptedText = encrypt(password, secretKey);
         
         try{
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, lastname);
             ps.setString(2, firstname);
             ps.setString(3, username);
-            ps.setString(4, password);
-            ps.setString(5, usertype); //m.getUsertype()
+            ps.setString(4, encryptedText);
+            //ps.setString(5, usertype); //m.getUsertype()
             
             i = ps.executeUpdate();
         }

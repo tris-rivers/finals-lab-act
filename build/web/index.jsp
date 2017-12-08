@@ -44,8 +44,6 @@
                     </span>
                 </div>
 
-            </div>
-
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <a href="#">ITEMS</a>
@@ -257,7 +255,7 @@
                             <div id = "home" class="parallax" data-parallax="scroll" data-z-index="1" data-image-src="img/header.jpg">
                                 <div class="title">
                                     <center>
-                                        EST <img src="img/header-icon1.jpg" style="height: 100px; width: 80px"> 2017
+                                        EST <img src="img/header-icon1.png" style="height: 90px; width: 100px"> 2017
                                         <br>
                                         <div class="company">ART BAR</div>
                                         SATISFY YOUR CREATIVE SIDE
@@ -266,19 +264,19 @@
                             </div>
 
                             <div id="shop" style="margin-top: 50px;" class="row">
-                                <div class="title-category col-sm-4">
-                                    <img class=" wow fadeInUp" src="img/coll/paintframe.jpg" style="width: 400px; height: auto;">
+                                <div class="title-category col-sm-4 wow fadeInUp">
+                                    <img src="img/coll/paintframe.jpg" style="width: 400px; height: auto;">
                                     <div style="top: 45px; left:180px; position: absolute; letter-spacing: 3px;">Paint</div><br>
                                     <div style="top: 65px; left:196px; position: absolute;">__</div>
                                     <div style="top: 105px; left:120px; position: absolute; letter-spacing: 3px;">Shop Collection</div>
                                 </div>
-                                <div class="title-category col-sm-4">
+                                <div class="title-category col-sm-4 wow fadeInUp" data-wow-delay="0.3s">
                                     <img src="img/coll/brushframe.jpg" style="width: 400px; height: auto;">
                                     <div style="top: 45px; left:180px; position: absolute; letter-spacing: 3px;">Brushes</div><br>
                                     <div style="top: 65px; left:210px; position: absolute;">__</div>
                                     <div style="top: 105px; left:130px; position: absolute; letter-spacing: 3px;">Shop Collection</div>
                                 </div>
-                                <div class="title-category col-sm-4">
+                                <div class="title-category col-sm-4 wow fadeInUp" data-wow-delay="0.8s">
                                     <img src="img/coll/canvasframe.jpg" style="width: 400px; height: auto;">
                                     <div style="top: 45px; left:180px; position: absolute; letter-spacing: 3px;">Canvas</div><br>
                                     <div style="top: 65px; left:210px; position: absolute;">__</div>
@@ -302,12 +300,12 @@
                                 </center>
                                 </td>
                                 <td>
-                                    <img src="img/form-img.jpg" style="width: 533px; height: 370px;">
+                                    <img class="wow slideInRight" src="img/form-img.jpg" style="width: 533px; height: 370px;">
                                 </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <img src="img/art_studio_1.jpg" style="width: 720px; height: 500px">
+                                        <img class="wow slideInLeft" src="img/art_studio_1.jpg" style="width: 720px; height: 500px">
                                     </td>
                                     <td colspan="2" class="buy-now" style="background-color: #34344A">
                                 <center>BUY ONLINE NOW & GET 20% OFF!</center>
@@ -387,8 +385,6 @@
                                 <center>Art Bar &#169; 2017 </center>
                             </div>
                         </div>
-
-
 
                     </c:if>
                     <script src="js/script.js"></script>
