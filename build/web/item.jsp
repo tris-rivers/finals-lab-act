@@ -385,7 +385,7 @@
                
             <div class="container-fluid">
                 
-                <div id = "home" class="parallax" data-parallax="scroll" data-z-index="1" data-image-src="img/russndark.jpg">
+                <div id = "home" class="parallax" data-parallax="scroll" data-z-index="1" data-image-src="Images/plants.png">
                     <div class="title">
                         <center>  
                             <br><br>

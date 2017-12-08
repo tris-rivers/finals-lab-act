@@ -2,7 +2,6 @@ package dao;
 
 import model.*;
 import com.opensymphony.xwork2.ActionSupport;
-import static dao.UserManagement.cipher;
 import java.sql.*;
 import java.util.*;
 import org.apache.struts2.interceptor.SessionAware;
@@ -60,7 +59,6 @@ public class Signin extends ActionSupport implements SessionAware {
             
             for (Iterator iterator = accounts.iterator(); iterator.hasNext();){
                 UserModel users = (UserModel) iterator.next(); 
-
                 if(username.equals(users.getUsername()) && password.equals(users.getPassword()));
                     return loginStatus();
             }
